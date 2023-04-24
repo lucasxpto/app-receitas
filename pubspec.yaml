@@ -69,6 +69,7 @@ flutter:
     - images/mexicana/
     - images/indiana/
     - images/francesa/
+    - data/receitas.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

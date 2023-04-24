@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ro_roamer/pages/home_screen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  final String titulo;
+
+  const CustomAppBar({Key? key, required this.titulo}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,22 +20,45 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             (route) => false,
           );
         },
-        child: ShaderMask(
-          shaderCallback: (bounds) => LinearGradient(
-            colors: [
-              Colors.deepOrangeAccent,
-              Colors.yellow,
-              Colors.orange,
-            ],
-          ).createShader(bounds),
-          child: Text(
-            'DiCumê',
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+        child: Column(
+          children: [
+            ShaderMask(
+              shaderCallback: (bounds) => LinearGradient(
+                colors: [
+                  Colors.deepOrangeAccent,
+                  Colors.yellow,
+                  Colors.orange,
+                ],
+              ).createShader(bounds),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'DiCumê',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(height: 20),
+                Text(
+                  titulo,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
       actions: [

@@ -1,0 +1,209 @@
+{
+  "italiana": {
+    "receitas": [
+      {
+        "nome": "Lasanha",
+        "imagem": "lasanha.jpeg",
+        "ingredientes": [
+          "massa de lasanha",
+          "molho de carne",
+          "queijo",
+          "molho bechamel"
+        ],
+        "modo_de_preparo": "Intercale camadas de massa, molho de carne, queijo e molho bechamel em um refratário. Asse no forno a 180°C por aproximadamente 45 minutos."
+      },
+      {
+        "nome": "Risoto",
+        "imagem": "risoto.jpeg",
+        "ingredientes": [
+          "arroz arbóreo",
+          "caldo de legumes",
+          "cebola",
+          "vinho branco",
+          "queijo parmesão"
+        ],
+        "modo_de_preparo": "Refogue a cebola, acrescente o arroz e o vinho. Adicione o caldo aos poucos, mexendo sempre. Quando estiver quase pronto, adicione o queijo parmesão e sirva."
+      },
+      {
+        "nome": "Tiramisù",
+        "imagem": "tiramisu.jpeg",
+        "ingredientes": [
+          "biscoitos",
+          "café",
+          "creme de mascarpone",
+          "cacau em pó"
+        ],
+        "modo_de_preparo": "Molhe os biscoitos no café e faça camadas alternadas de biscoitos e creme de mascarpone. Polvilhe cacau em pó por cima e leve à geladeira por algumas horas antes de servir."
+      }
+    ]
+  },
+  "japonesa": {
+    "receitas": [
+      {
+        "nome": "Sushi",
+        "imagem": "sushi.webp",
+        "ingredientes": [
+          "arroz japonês",
+          "vinagre de arroz",
+          "peixe cru",
+          "frutos do mar",
+          "vegetais",
+          "alga nori"
+        ],
+        "modo_de_preparo": "Cozinhe o arroz e tempere com vinagre de arroz. Faça bolinhos de arroz e coloque os ingredientes por cima ou enrole com a alga nori. Corte em pedaços e sirva."
+      },
+      {
+        "nome": "Tempurá",
+        "imagem": "tempura.jpeg",
+        "ingredientes": [
+          "legumes",
+          "frutos do mar",
+          "massa tempurá",
+          "óleo"
+        ],
+        "modo_de_preparo": "Corte os legumes e frutos do mar, mergulhe na massa tempurá e frite em óleo quente até dourar. Escorra em papel toalha e sirva com molho para tempurá."
+      },
+      {
+        "nome": "Ramen",
+        "imagem": "ramen.webp",
+        "ingredientes": [
+          "macarrão",
+          "caldo",
+          "carne",
+          "ovos",
+          "cebolinha",
+          "broto de bambu"
+        ],
+        "modo_de_preparo": "Cozinhe o macarrão e coloque em uma tigela. Cubra com o caldo quente e adicione os ingredientes como carne, ovos cozidos, cebolinha e brotos de bambu. Sirva quente."
+      }
+    ]
+  },
+  "mexicana": {
+    "receitas": [
+      {
+        "nome": "Tacos",
+        "imagem": "tacos.webp",
+        "ingredientes": [
+          "tortilhas",
+          "carne",
+          "peixe",
+          "legumes",
+          "guacamole",
+          "pico de gallo",
+          "queijo",
+          "sour cream"
+        ],
+        "modo_de_preparo": "Prepare os recheios e coloque-os sobre as tortilhas. Adicione os acompanhamentos, como guacamole, pico de gallo, queijo e sour cream. Sirva imediatamente."
+      },
+      {
+        "nome": "Enchiladas",
+        "imagem": "enchiladas.jpeg",
+        "ingredientes": [
+          "tortilhas de milho",
+          "carne",
+          "queijo",
+          "legumes",
+          "molho de pimenta"
+        ],
+        "modo_de_preparo": "Recheie as tortilhas com carne, queijo ou legumes. Enrole e coloque-as em um refratário. Cubra com molho de pimenta e asse no forno a 180°C por cerca de 30 minutos."
+      },
+      {
+        "nome": "Chiles Rellenos",
+        "imagem": "chilesrellenos.jpg",
+        "ingredientes": [
+          "pimentões",
+          "carne",
+          "queijo",
+          "legumes",
+          "massa",
+          "óleo",
+          "molho de tomate"
+        ],
+        "modo_de_preparo": "Recheie os pimentões com carne, queijo ou legumes. Passe-os na massa e frite em óleo quente até dourar. Sirva com molho de tomate por cima."
+      }
+    ]
+  },
+  "indiana": {
+    "receitas": [
+      {
+        "nome": "Biryani",
+        "imagem": "biryani.jpeg",
+        "ingredientes": [
+          "arroz basmati",
+          "carne",
+          "frango",
+          "peixe",
+          "legumes",
+          "especiarias",
+          "caldo"
+        ],
+        "modo_de_preparo": "Refogue a carne, frango, peixe ou legumes com especiarias. Adicione o arroz e o caldo, e cozinhe até que o arroz esteja macio e os sabores estejam bem incorporados."
+      },
+      {
+        "nome": "Butter Chicken",
+        "imagem": "butter.webp",
+        "ingredientes": [
+          "frango",
+          "tomate",
+          "manteiga",
+          "creme de leite",
+          "especiarias"
+        ],
+        "modo_de_preparo": "Cozinhe o frango com especiarias e adicione o molho de tomate. Adicione manteiga e creme de leite, cozinhe até que o frango esteja macio e o molho engrossado."
+      },
+      {
+        "nome": "Palak Paneer",
+        "imagem": "palak.jpeg",
+        "ingredientes": [
+          "queijo paneer",
+          "espinafre",
+          "especiarias",
+          "cebola",
+          "tomate"
+        ],
+        "modo_de_preparo": "Cozinhe o espinafre com especiarias, cebola e tomate até que esteja macio. Adicione o queijo paneer cortado em cubos e cozinhe até que o queijo esteja aquecido. Sirva com arroz ou naan."
+      }
+    ]
+  },
+  "francesa": {
+    "receitas": [
+      {
+        "nome": "Boeuf Bourguignon",
+        "imagem": "boeuf-burguignon.jpeg",
+        "ingredientes": [
+          "carne",
+          "vinho tinto",
+          "legumes",
+          "cogumelos",
+          "especiarias"
+        ],
+        "modo_de_preparo": "Doure a carne e reserve. Refogue os legumes e cogumelos. Adicione a carne de volta à panela, juntamente com o vinho tinto e especiarias. Cozinhe lentamente até que a carne esteja macia e o molho reduzido."
+      },
+      {
+        "nome": "Ratatouille",
+        "imagem": "ratatouille.jpeg",
+        "ingredientes": [
+          "berinjela",
+          "abobrinha",
+          "pimentão",
+          "tomate",
+          "cebola",
+          "ervas de Provence"
+        ],
+        "modo_de_preparo": "Corte os legumes em cubos e refogue-os separadamente. Junte todos os legumes na mesma panela e cozinhe com as ervas de Provence até que estejam macios e os sabores bem incorporados."
+      },
+      {
+        "nome": "Crème Brûlée",
+        "imagem": "creme.jpeg",
+        "ingredientes": [
+          "creme de leite",
+          "gemas de ovos",
+          "açúcar",
+          "baunilha",
+          "açúcar para caramelizar"
+        ],
+        "modo_de_preparo": "Misture o creme de leite, as gemas, o açúcar e a baunilha. Despeje a mistura em ramequins e asse em banho-maria no forno a 160°C por cerca de 40 minutos. Deixe esfriar, polvilhe açúcar por cima e caramelize com um maçarico culinário antes de servir."
+      }
+    ]
+  }
+}

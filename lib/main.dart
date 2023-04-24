@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ro_roamer/pages/francesa_screen.dart';
-import 'package:ro_roamer/pages/indiana_screen.dart';
-import 'package:ro_roamer/pages/japonesa_screen.dart';
-import 'package:ro_roamer/pages/mexicana_screen.dart';
-import 'pages/italiana_screen.dart';
+import 'pages/receitas_indiana.dart';
+import 'pages/receitas_italiana.dart';
+import 'pages/receitas_francesas.dart';
+import 'pages/receitas_japonesas.dart';
+import 'pages/receitas_mexicana.dart';
 import 'pages/home_screen.dart';
 
 void main() {
@@ -11,11 +11,11 @@ void main() {
     debugShowCheckedModeBanner: false,
     routes: {
       '/': (_) => HomeScreen(),
-      '/italiana': (_) => ItalianaScreen(),
-      '/japonesa': (_) => JaponesaScreen(),
-      '/francesa': (_) => FrancesaScreen(),
-      '/indiana': (_) => IndianaScreen(),
-      '/mexicana': (_) => MexicanaScreen(),
+      '/italiana': (_) => ReceitasItalianas(),
+      '/japonesa': (_) => ReceitasJaponesas(),
+      '/francesa': (_) => ReceitasFrancesas(),
+      '/indiana': (_) => ReceitasIndianas(),
+      '/mexicana': (_) => ReceitasMexicanas(),
     },
     theme: ThemeData(
       popupMenuTheme: PopupMenuThemeData(
