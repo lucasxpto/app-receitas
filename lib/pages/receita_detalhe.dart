@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '/app_bar.dart';
+import 'lauch_intents.dart';
 
 class ReceitaDetalhe extends StatelessWidget {
   final Map<String, dynamic> receita;
   final String cozinha;
 
-  const ReceitaDetalhe(
-      {super.key, required this.receita, required this.cozinha});
+  ReceitaDetalhe({super.key, required this.receita, required this.cozinha});
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +65,51 @@ class ReceitaDetalhe extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                  ),
+                  onPressed: () {
+                    final Uri url = Uri(
+                        scheme: 'https',
+                        host: 'www.youtube.com',
+                        path: '/watch',
+                        queryParameters: {'v': '${receita['video_url']}'});
+                    launchInBrowser(url);
+                  },
+                  child: const Text('Assistir ao vídeo')),
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueAccent,
+                  ),
+                  onPressed: () {
+                    makePhoneCall('+5569993329317');
+                  },
+                  child: const Text('Ligar para o restaurante')),
+            ),
+            const SizedBox(height: 20),
+            Center(
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                ),
+                onPressed: () {
+                  final Uri url = Uri(
+                    scheme: 'https',
+                    host: 'goo.gl',
+                    path: 'maps/BozoMjuZmEtowUnF8',
+                  );
+                  launchInBrowser(url);
+                },
+                icon: const Icon(Icons.map),
+                label: const Text('Ver no mapa'),
               ),
             ),
           ],
