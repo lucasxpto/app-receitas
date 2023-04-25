@@ -1,31 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:ro_roamer/app_bar.dart';
+import '/app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final double largura = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         titulo: 'Início',
       ),
-      body: ListView(
+      body: GridView.count(
+        padding:
+            const EdgeInsets.only(top: 28, left: 10, right: 10, bottom: 28),
+        crossAxisCount: largura < 600 ? 1 : 2,
+        mainAxisSpacing: 50,
+        crossAxisSpacing: 50,
         children: [
           InkWell(
             onTap: () {
               Navigator.of(context).pushNamed('/japonesa');
             },
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30, right: 20, bottom: 0),
-              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.6),
-                    offset: Offset(0.0, 10.0),
+                    offset: const Offset(0.0, 10.0),
                     blurRadius: 10.0,
                     spreadRadius: -6.0,
                   ),
@@ -35,12 +40,12 @@ class HomeScreen extends StatelessWidget {
                     Colors.black.withOpacity(0.2),
                     BlendMode.multiply,
                   ),
-                  image: AssetImage('images/japonesa/ramen.webp'),
+                  image: const AssetImage('images/japonesa/ramen.webp'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Stack(
-                children: [
+                children: const [
                   Align(
                     child: Padding(
                       padding: EdgeInsets.all(10),
@@ -70,14 +75,12 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).pushNamed('/mexicana');
             },
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30, right: 20, bottom: 0),
-              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.6),
-                    offset: Offset(0.0, 10.0),
+                    offset: const Offset(0.0, 10.0),
                     blurRadius: 10.0,
                     spreadRadius: -6.0,
                   ),
@@ -87,12 +90,12 @@ class HomeScreen extends StatelessWidget {
                     Colors.black.withOpacity(0.2),
                     BlendMode.multiply,
                   ),
-                  image: AssetImage('images/mexicana/tacos.webp'),
+                  image: const AssetImage('images/mexicana/tacos.webp'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Stack(
-                children: [
+                children: const [
                   Align(
                     child: Padding(
                       padding: EdgeInsets.all(10),
@@ -122,14 +125,12 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).pushNamed('/indiana');
             },
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30, right: 20, bottom: 0),
-              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.6),
-                    offset: Offset(0.0, 10.0),
+                    offset: const Offset(0.0, 10.0),
                     blurRadius: 10.0,
                     spreadRadius: -6.0,
                   ),
@@ -139,12 +140,12 @@ class HomeScreen extends StatelessWidget {
                     Colors.black.withOpacity(0.2),
                     BlendMode.multiply,
                   ),
-                  image: AssetImage('images/indiana/biryani.jpeg'),
+                  image: const AssetImage('images/indiana/biryani.jpeg'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Stack(
-                children: [
+                children: const [
                   Align(
                     child: Padding(
                       padding: EdgeInsets.all(10),
@@ -174,14 +175,12 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).pushNamed('/italiana');
             },
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30, right: 20, bottom: 0),
-              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.6),
-                    offset: Offset(0.0, 10.0),
+                    offset: const Offset(0.0, 10.0),
                     blurRadius: 10.0,
                     spreadRadius: -6.0,
                   ),
@@ -191,12 +190,12 @@ class HomeScreen extends StatelessWidget {
                     Colors.black.withOpacity(0.2),
                     BlendMode.multiply,
                   ),
-                  image: AssetImage('images/italiana/lasanha.jpeg'),
+                  image: const AssetImage('images/italiana/lasanha.jpeg'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Stack(
-                children: [
+                children: const [
                   Align(
                     child: Padding(
                       padding: EdgeInsets.all(10),
@@ -226,14 +225,12 @@ class HomeScreen extends StatelessWidget {
               Navigator.of(context).pushNamed('/francesa');
             },
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30, right: 20, bottom: 0),
-              height: 160,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.6),
-                    offset: Offset(0.0, 10.0),
+                    offset: const Offset(0.0, 10.0),
                     blurRadius: 10.0,
                     spreadRadius: -6.0,
                   ),
@@ -243,12 +240,13 @@ class HomeScreen extends StatelessWidget {
                     Colors.black.withOpacity(0.2),
                     BlendMode.multiply,
                   ),
-                  image: AssetImage('images/francesa/boeuf-burguignon.jpeg'),
+                  image:
+                      const AssetImage('images/francesa/boeuf-burguignon.jpeg'),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Stack(
-                children: [
+                children: const [
                   Align(
                     child: Padding(
                       padding: EdgeInsets.all(10),

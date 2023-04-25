@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ro_roamer/pages/home_screen.dart';
+import '/pages/home_screen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String titulo;
@@ -9,20 +9,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      centerTitle: false,
       backgroundColor: Colors.black,
+      toolbarHeight: 100,
       title: InkWell(
         onTap: () {
           Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (context) => HomeScreen()),
+            MaterialPageRoute(builder: (context) => const HomeScreen()),
             (route) => false,
           );
         },
         child: Column(
           children: [
             ShaderMask(
-              shaderCallback: (bounds) => LinearGradient(
+              shaderCallback: (bounds) => const LinearGradient(
                 colors: [
                   Colors.deepOrangeAccent,
                   Colors.yellow,
@@ -31,9 +31,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ).createShader(bounds),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(top: 20),
+                    padding: EdgeInsets.only(top: 20),
                     child: Text(
                       'DiCumê',
                       style: TextStyle(
@@ -53,7 +53,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   padding: const EdgeInsets.only(bottom: 10),
                   child: Text(
                     titulo,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                       color: Colors.white,
@@ -67,7 +67,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         PopupMenuButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.local_dining,
               color: Colors.yellow,
             ),
@@ -77,7 +77,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               Navigator.of(context).pushNamed('/$value');
             },
             itemBuilder: (BuildContext context) {
-              return [
+              return const [
                 PopupMenuItem(
                     value: 'italiana', child: Text('Cozinha italiana')),
                 PopupMenuItem(
@@ -94,5 +94,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(100);
 }

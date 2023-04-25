@@ -8,13 +8,13 @@ import 'receita_detalhe.dart';
 class ListaReceitas extends StatefulWidget {
   final String cozinha;
 
-  ListaReceitas({required this.cozinha});
+  const ListaReceitas({super.key, required this.cozinha});
 
   @override
-  _ListaReceitasState createState() => _ListaReceitasState();
+  ListaReceitasState createState() => ListaReceitasState();
 }
 
-class _ListaReceitasState extends State<ListaReceitas> {
+class ListaReceitasState extends State<ListaReceitas> {
   late Future<Map<String, dynamic>> receitas;
 
   @override
@@ -36,40 +36,43 @@ class _ListaReceitasState extends State<ListaReceitas> {
             itemCount: receitasDaCozinha.length,
             itemBuilder: (context, index) {
               final receita = receitasDaCozinha[index];
-              return ListTile(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ReceitaDetalhe(
-                          receita: receita, cozinha: widget.cozinha),
-                    ),
-                  );
-                },
-                minVerticalPadding: 25,
-                leading: Image.asset(
-                  'images/${widget.cozinha.toString().toLowerCase().replaceAll(RegExp(r'[^\w\s]+'), '')}/${receita['imagem']}',
-                  width: 150,
-                  fit: BoxFit.cover,
-                ),
-                title: Text(
-                  receita['nome'],
-                  style: TextStyle(
-                    color: Colors.orangeAccent,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w300,
+              return Container(
+                margin: const EdgeInsets.only(
+                    left: 0, top: 20, right: 0, bottom: 0),
+                child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ReceitaDetalhe(
+                            receita: receita, cozinha: widget.cozinha),
+                      ),
+                    );
+                  },
+                  leading: Image.asset(
+                    'images/${widget.cozinha.toString().toLowerCase().replaceAll(RegExp(r'[^\w\s]+'), '')}/${receita['imagem']}',
+                    width: 150,
+                    fit: BoxFit.cover,
                   ),
+                  title: Text(
+                    receita['nome'],
+                    style: const TextStyle(
+                      color: Colors.orangeAccent,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
+                  subtitle: Text(receita['modo_de_preparo'],
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(color: Colors.white)),
                 ),
-                subtitle: Text(receita['modo_de_preparo'],
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(color: Colors.white)),
               );
             },
           );
         } else if (snapshot.hasError) {
-          return Text("Erro ao carregar receitas");
+          return const Text("Erro ao carregar receitas");
         }
-        return CircularProgressIndicator();
+        return const CircularProgressIndicator();
       },
     );
   }

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ro_roamer/app_bar.dart';
+import '/app_bar.dart';
 
 class ReceitaDetalhe extends StatelessWidget {
   final Map<String, dynamic> receita;
   final String cozinha;
 
-  ReceitaDetalhe({required this.receita, required this.cozinha});
+  const ReceitaDetalhe(
+      {super.key, required this.receita, required this.cozinha});
 
   @override
   Widget build(BuildContext context) {
@@ -15,23 +16,23 @@ class ReceitaDetalhe extends StatelessWidget {
         titulo: receita['nome'],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.only(top: 28, left: 10, right: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
                 'images/${cozinha.toString().toLowerCase().replaceAll(RegExp(r'[^\w\s]+'), '')}/${receita['imagem']}'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               receita['nome'],
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.orange,
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Ingredientes',
               style: TextStyle(
                 fontSize: 18,
@@ -39,18 +40,18 @@ class ReceitaDetalhe extends StatelessWidget {
                 color: Colors.orangeAccent,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ...receita['ingredientes'].map<Widget>((ingrediente) {
               return Text(
                 ingrediente,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   color: Colors.white,
                 ),
               );
             }).toList(),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Modo de preparo',
               style: TextStyle(
                 fontSize: 18,
@@ -58,10 +59,10 @@ class ReceitaDetalhe extends StatelessWidget {
                 color: Colors.orangeAccent,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               receita['modo_de_preparo'],
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 color: Colors.white,
               ),
